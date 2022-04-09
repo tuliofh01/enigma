@@ -4,7 +4,7 @@ import curses, sys, time
 def initialize(beObject):
     # Initializes color pairs
     curses.init_pair(1, curses.COLOR_WHITE, 234); curses.init_pair(2, curses.COLOR_BLACK, curses.COLOR_WHITE)
-    curses.init_pair(3, curses.COLOR_GREEN, curses.COLOR_BLACK); curses.init_pair(4, curses.COLOR_RED, curses.COLOR_BLACK)
+    curses.init_pair(3, curses.COLOR_GREEN, 234); curses.init_pair(4, curses.COLOR_RED, 234)
     
     # Creates a window that covers half of the screen (info display for records)
     infoDisplay = curses.newwin(curses.LINES, curses.COLS//2, 0, curses.COLS//2)
@@ -94,14 +94,20 @@ def initialize(beObject):
 
         # Adds control options to the screen
         infoDisplay.addstr((curses.LINES - 1), ((curses.COLS // 4) - \
-            (len("PRESS E TO ERASE RECORD OR OTHER KEY TO RETURN")//2)), "PRESS E TO ERASE RECORD OR OTHER KEY TO RETURN", curses.A_BOLD)
+            (len("PRESS E TWICE TO ERASE RECORD OR OTHER KEY TO RETURN")//2)), "PRESS TWICE E TO ERASE RECORD OR OTHER KEY TO RETURN", curses.A_BOLD)
 
         # Updates the screen
         infoDisplay.refresh()
 
         lastKey = infoDisplay.getch()
         if lastKey in (ord('e'), ord('E')):
-            beObject.deleteRecord(completeRecordList[index][0])
+            infoDisplay.addstr((curses.LINES - 1), ((curses.COLS // 4) - \
+                (len("PRESS E TWICE TO ERASE RECORD OR OTHER KEY TO RETURN")//2)),\
+                    "PRESS TWICE E TO ERASE RECORD OR OTHER KEY TO RETURN", curses.A_BOLD | curses.color_pair(4))
+            infoDisplay.refresh()
+            time.sleep(2)
+            if lastKey in (ord('e'), ord('E')):
+                beObject.deleteRecord(completeRecordList[index][0])
         else:
             pass
 
