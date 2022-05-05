@@ -1,6 +1,6 @@
 
 # Enigma
-### *Last updated on - (09/04/2022)*
+### *Last updated on - (05/05/2022)*
 ---
 
 ## Summary:
@@ -19,6 +19,10 @@
 - You **must** run the setup.sh file before launching Engima (*~/enigma/bin/main.py*), otherwise the app won't work.
 - Launch Engima through the launcher.sh file.
 - Make sure to chmod both .sh files and to install all required python modules (check source code).
+---
+
+## TODO:
+- Treat unknown user exception (login screen).
 ---
 
 ## Credits:
