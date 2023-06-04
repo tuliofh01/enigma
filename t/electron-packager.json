@@ -1,0 +1,9 @@
+{
+  "name": "Enigma-JS",
+  "appVersion": "1.0.0",
+  "version": "13.1.7",
+  "platform": "linux",
+  "arch": "x64",
+  "out": "dist",
+  "overwrite": true
+}
