@@ -1,6 +1,5 @@
 # Enigma-JS
 ### *Último update - (04/06/2023)*
----
 
 ## Resumo:
 - Enigma-JS é um *password manager* simples feito totalmente em JS (Node, React e Electron).
