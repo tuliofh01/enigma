@@ -9,6 +9,7 @@ function PasswordMenu(){
     const passwordRef = useRef();
     const descriptionRef = useRef();
     const loginRef = useRef();
+    const searchbarRef = useRef();
 
     useEffect(() => {
       async function getData(){
@@ -37,6 +38,11 @@ function PasswordMenu(){
       }
     }
 
+    async function searchbarHandler(){
+      const searchString = searchbarRef.current.value
+      setPasswords(await ipcRenderer.invoke("searchPasswords", searchString));
+    }
+
     async function tableDataHandler(event){
       const text = event.target.innerText;
       const object = passwords.filter(password => password["DESCRIPTION"] === text);
@@ -55,6 +61,20 @@ function PasswordMenu(){
       <div className={styles.container}>
         <div className={styles.leftCard}>
           <h3 className={styles.title}>Senhas:</h3>
+          <div className={styles.searchbarContainer}>
+            <input
+              ref={searchbarRef}
+              className={styles.searchbarInput}
+              placeholder="Buscar"
+            />
+            <button onClick={searchbarHandler} className={styles.searchButton}>
+              <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+              />
+              <span className="material-symbols-outlined">search</span>
+            </button>
+          </div>
           <table>
             <tbody>
               {passwords.map((password) => (

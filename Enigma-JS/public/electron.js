@@ -88,6 +88,34 @@ ipcMain.handle('getPasswords', async (event, ...args) => {
   return results;
 });
 
+// Searches for specific passwords
+ipcMain.handle('searchPasswords', async (event, ...args) => {
+  const [targetDescription] = args;
+  let results = [];
+
+  // Connects to the database
+  const dbPath = path.join(__dirname, "../src/assets/vault.db");
+  const db = new Database(dbPath);
+
+  // Gets passwords
+  const query = `SELECT * FROM PASSWORDS WHERE USERNAME = '${currentUsername}' AND DESCRIPTION LIKE '%${targetDescription}%'`;
+  const stmt = db.prepare(query);
+  const rows = stmt.all();
+
+  results = rows;
+
+  for (let i = 0; i < results.length; i++) {
+    results[i]["PASSWORD"] = decryptText(
+      results[i]["PASSWORD"],
+      currentPassword
+    );
+  }
+
+  db.close();
+
+  return results;
+});
+
 // Creates or updates a password entry
 ipcMain.handle('setPassword', async (event, ...args) => {
   const [targetPassword, targetDescription, targetLogin] = args;
