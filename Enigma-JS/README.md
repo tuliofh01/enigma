@@ -16,6 +16,7 @@
 
 ## Building:
 - Use o comando *npm i --force* para instalar as dependências do programa.
+- Execute o script db-setup.js para configurar o banco de dados e criar usuários.
 - Execute os scrips build, rebuild e postinstall, definidos no package.json, antes de executar o programa por meio de *npm run start*.
 - Para gerar um arquivo executável utilize a plataforma "electron-packager".
 
