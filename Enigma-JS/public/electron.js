@@ -163,3 +163,22 @@ ipcMain.handle('deletePassword', async (event, ...args) => {
   db.close();
 
 });
+
+// Creates user
+ipcMain.handle("createUser", async (event, ...args) => {
+  const [targetUsername, targetPassword] = args;
+
+  const { SHA256 } = require("sha2");
+  const passwordBuffer = SHA256(targetPassword);
+  const encodedPassword = passwordBuffer.toString("base64");
+
+  // Connects to the database
+  const dbPath = path.join(__dirname, "../src/assets/vault.db");
+  const db = new Database(dbPath);
+
+  const query = `INSERT INTO USERS (USERNAME, PASSWORD) VALUES ('${targetUsername}', '${encodedPassword}') `;
+  const stmt = db.prepare(query);
+  stmt.run();
+
+  db.close();
+});
