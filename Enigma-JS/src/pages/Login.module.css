@@ -78,7 +78,7 @@
 
 .button {
   justify-content: center;
-  margin: 5px 50px 10px 50px;
+  margin: 5px 50px 5px 50px;
   width: 215px;
   display: inline-block;
   padding: 10px 20px;
@@ -92,4 +92,19 @@
 
 .button:hover {
   background-color: rgb(45, 45, 45);
+}
+
+.createUser {
+  margin-top: 0px;
+  color: rgb(100, 100, 100);
+  padding: 2px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.createUser:hover{
+  color: grey;
+  text-decoration: underline;
 }
