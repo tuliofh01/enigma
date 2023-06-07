@@ -29,6 +29,10 @@ function Login(){
         }
     }
 
+    function createUserHandler(){
+      navigate("/createUser");
+    }
+
     return (
       <div className={styles.container}>
         <div className={styles.leftCard}>
@@ -37,6 +41,7 @@ function Login(){
             <input ref={usrRef} type="text" className={styles.input} placeholder='Usuário'/>
             <input ref={pwdRef} type="password" className={styles.input} placeholder='Senha'/>
             <button type='submit' className={styles.button}>Logar</button>
+            <p className={styles.createUser} onClick={createUserHandler}>Criar Usuário</p>
           </form>
         </div>
 
