@@ -1,21 +1,29 @@
-MIT License
+Licença de Software Proprietária
 
-Copyright (c) 2023 Túlio Ferreira Horta
+Este contrato de licença de software ("Contrato") é celebrado entre Túlio Horta ("Desenvolvedor") e o usuário final ("Usuário").
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Concessão de Licença:
+O Desenvolvedor concede ao Usuário uma licença não exclusiva e intransferível para usar o software Enigma-JS ("Software") em uma única máquina de cada vez. O Usuário não possui o Software, apenas o direito de usá-lo de acordo com os termos deste Contrato.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. Restrições:
+O Usuário concorda em não:
+   a) Copiar, modificar ou distribuir o Software, exceto conforme autorizado expressamente neste Contrato.
+   b) Remover ou alterar quaisquer avisos de direitos autorais, marcas registradas ou outros avisos de propriedade do Software.
+   c) Transferir ou sublicenciar o Software para terceiros sem o consentimento prévio por escrito do Desenvolvedor.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. Propriedade Intelectual:
+O Software e todos os direitos de propriedade intelectual associados pertencem exclusivamente ao Desenvolvedor. Este Contrato não concede ao Usuário nenhum direito de propriedade sobre o Software, exceto o direito limitado de uso conforme expressamente concedido aqui.
+
+4. Limitação de Responsabilidade:
+O Desenvolvedor não será responsável por quaisquer danos diretos, indiretos, incidentais, consequenciais ou especiais decorrentes do uso ou incapacidade de uso do Software, mesmo que o Desenvolvedor tenha sido informado da possibilidade de tais danos.
+
+5. Vigência e Rescisão:
+Este Contrato entra em vigor na data em que o Usuário instalar o Software e permanece em vigor até ser rescindido. O Desenvolvedor pode rescindir este Contrato imediatamente, sem aviso prévio, se o Usuário violar qualquer uma das disposições aqui estabelecidas.
+
+6. Lei Aplicável:
+Este Contrato será regido e interpretado de acordo com as leis do país/jurisdição em que o Desenvolvedor está sediado.
+
+Ao instalar ou utilizar o Software, o Usuário reconhece ter lido e compreendido este Contrato e concorda em estar vinculado aos seus termos e condições.
+
+Túlio Ferreira Horta,
+10 de Julho de 2023.
